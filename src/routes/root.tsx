@@ -1,13 +1,23 @@
-import { createBrowserRouter } from "react-router-dom";
+interface Routes {
+  id: string;
+  label: string;
+  path: string;
+  element: React.ReactElement;
+}
 
-import { Home, NotFound } from "../pages";
-
-const router = createBrowserRouter([
+const routes: Routes[] = [
   {
-    path: "main_window",
-    element: <Home />,
-    errorElement: <NotFound />,
+    id: "home",
+    label: "Home",
+    path: "/main_window/home",
+    element: <div>Home!</div>,
   },
-]);
+  {
+    id: "settings",
+    label: "Settings",
+    path: "/main_window/settings",
+    element: <div>Settings!</div>,
+  },
+];
 
-export default router;
+export default routes;

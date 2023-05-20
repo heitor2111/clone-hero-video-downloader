@@ -15,6 +15,8 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
+    minWidth: 800,
+    minHeight: 600,
     darkTheme: true,
     fullscreenable: false,
     webPreferences: {
@@ -24,6 +26,9 @@ const createWindow = (): void => {
 
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+
+  // Maximize the window
+  mainWindow.maximize();
 };
 
 // This method will be called when Electron has finished

@@ -12,5 +12,19 @@
     "plugin:import/electron",
     "plugin:import/typescript"
   ],
-  "parser": "@typescript-eslint/parser"
+  "parser": "@typescript-eslint/parser",
+  "import/resolver": {
+    "alias": {
+      "map": [
+        ["@assets", "./src/assets"],
+        ["@components", "./src/components"],
+        ["@hooks", "./src/hooks"],
+        ["@locales", "./src/locales"],
+        ["@pages", "./src/pages"],
+        ["@routes", "./src/routes"],
+        ["@services", "./src/services"],
+        ["@utils", "./src/utils"]
+      ]
+    }
+  }
 }

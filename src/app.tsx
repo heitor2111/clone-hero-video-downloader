@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 
-import { root as routerRoot } from "./routes";
+import { Root } from "./pages";
 
-const app = document.getElementById("app");
-const root = createRoot(app);
-
-root.render(<RouterProvider router={routerRoot} />);
+createRoot(document.getElementById("root")).render(
+  <MemoryRouter>
+    <Root />
+  </MemoryRouter>
+);

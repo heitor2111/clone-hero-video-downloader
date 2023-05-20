@@ -26,4 +26,6 @@
  * ```
  */
 
+import "./assets/fonts/Montserrat/index.css";
+import "./index.css";
 import "./app";
